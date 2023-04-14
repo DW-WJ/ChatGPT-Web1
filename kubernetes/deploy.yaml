@@ -21,7 +21,7 @@ spec:
           name: chatgpt-web
           imagePullPolicy: Always
           ports:
-            - containerPort: 3002
+            - containerPort: 3003
           env:
             - name: OPENAI_API_KEY
               value: sk-xxx
@@ -60,7 +60,7 @@ spec:
     - name: chatgpt-web
       port: 3002
       protocol: TCP
-      targetPort: 3002
+      targetPort: 3003
   selector:
     app: chatgpt-web
   type: ClusterIP
