@@ -1,3 +1,10 @@
+<!--
+ * @Author: duanxiaoming
+ * @Date: 2023-04-13 21:58:13
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2023-04-14 11:27:37
+ * @FilePath: \ChatGPT-Web1\src\views\chat\layout\sider\index.vue
+-->
 <script setup lang='ts'>
 import type { CSSProperties } from 'vue'
 import { computed, ref, watch } from 'vue'
@@ -79,7 +86,7 @@ watch(
         <div class="flex-1 min-h-0 pb-4 overflow-hidden">
           <List />
         </div>
-         <!-- <div class="p-4">
+        <!-- <div class="p-4">
           <NButton block @click="show = true">
             {{ $t('store.siderButton') }}
           </NButton>
