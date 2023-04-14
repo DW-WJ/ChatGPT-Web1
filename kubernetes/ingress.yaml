@@ -14,7 +14,7 @@ spec:
               service:
                 name: chatgpt-web
                 port:
-                  number: 3002
+                  number: 3003
             path: /
             pathType: ImplementationSpecific
   tls:

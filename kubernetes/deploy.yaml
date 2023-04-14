@@ -58,7 +58,7 @@ metadata:
 spec:
   ports:
     - name: chatgpt-web
-      port: 3002
+      port: 3003
       protocol: TCP
       targetPort: 3003
   selector:
