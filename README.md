@@ -186,13 +186,13 @@ pnpm dev
 docker build -t chatgpt-web .
 
 # 前台运行
-docker run --name chatgpt-web --rm -it -p 127.0.0.1:3002:3002 --env OPENAI_API_KEY=your_api_key chatgpt-web
+docker run --name chatgpt-web --rm -it -p 127.0.0.1:3003:3003 --env OPENAI_API_KEY=your_api_key chatgpt-web
 
 # 后台运行
-docker run --name chatgpt-web -d -p 127.0.0.1:3002:3002 --env OPENAI_API_KEY=your_api_key chatgpt-web
+docker run --name chatgpt-web -d -p 127.0.0.1:3003:3003 --env OPENAI_API_KEY=your_api_key chatgpt-web
 
 # 运行地址
-http://localhost:3002/
+http://localhost:3003/
 ```
 
 #### Docker compose
@@ -206,7 +206,7 @@ services:
   app:
     image: chenzhaoyu94/chatgpt-web # 总是使用 latest ,更新时重新 pull 该 tag 镜像即可
     ports:
-      - 127.0.0.1:3002:3002
+      - 127.0.0.1:3003:3003
     environment:
       # 二选一
       OPENAI_API_KEY: sk-xxx
@@ -242,7 +242,7 @@ services:
 
 | 环境变量名称          | 必填                   | 备注                                                                                               |
 | --------------------- | ---------------------- | -------------------------------------------------------------------------------------------------- |
-| `PORT`                | 必填                   | 默认 `3002`
+| `PORT`                | 必填                   | 默认 `3003`
 | `AUTH_SECRET_KEY`          | 可选                   | 访问权限密钥                                        |
 | `MAX_REQUEST_PER_HOUR`          | 可选                   | 每小时最大请求次数，可选，默认无限                                        |
 | `TIMEOUT_MS`          | 可选                   | 超时时间，单位毫秒                                                                             |

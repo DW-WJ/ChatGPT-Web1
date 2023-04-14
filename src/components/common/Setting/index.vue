@@ -1,9 +1,16 @@
+<!--
+ * @Author: duanxiaoming
+ * @Date: 2023-04-13 21:58:13
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2023-04-14 11:19:44
+ * @FilePath: \ChatGPT-Web1\src\components\common\Setting\index.vue
+-->
 <script setup lang='ts'>
 import { computed, ref } from 'vue'
 import { NModal, NTabPane, NTabs } from 'naive-ui'
 import General from './General.vue'
 import Advanced from './Advanced.vue'
-import About from './About.vue'
+// import About from './About.vue'
 import { useAuthStore } from '@/store'
 import { SvgIcon } from '@/components/common'
 
@@ -57,7 +64,7 @@ const show = computed({
             <Advanced />
           </div>
         </NTabPane>
-         <!-- <NTabPane name="Config" tab="Config">
+        <!-- <NTabPane name="Config" tab="Config">
           <template #tab>
             <SvgIcon class="text-lg" icon="ri:list-settings-line" />
             <span class="ml-2">{{ $t('setting.config') }}</span>
